@@ -1,0 +1,212 @@
+/* Web's Midterm Project */
+/* Mohammad Javad Rajabi - 9831025 */
+
+
+/* specified fonts and some commen configuration ans style */
+*{
+    box-sizing: border-box;
+    font-family: Tahoma ;
+    padding: 0;
+    margin: 0;
+}
+
+/* for handling the errors */
+.gone{
+    opacity: 0;
+    z-index: -1;
+}
+
+/*  specify for whole html page that is in main class
+    align-items: center -> align items to the center
+    flex display is used
+    flex items are ordered in row
+*/
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+/* set background image, with blur filter and resize the background image to cover the entire container
+   filter:blur(8px) for bluring and background for background image */
+.main::after{
+    content: "";
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    filter:blur(8px);
+    position: absolute;
+    background: url("./background.webp") center no-repeat;
+    background-size: cover;
+}
+
+/* basic and commen style for all boxes which holds all objects
+   like min-height, background-color, flex-direction , ... 
+   flex items are ordered in column
+   flex display is used
+   */
+.box{
+    min-height: 40%;
+    background-color: #eeea;
+    padding:8px;
+    margin: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px #aaa;
+    position: relative;
+    overflow: hidden;
+}
+
+/* specify for the right or the first box */
+.first_box{
+    width: 50%;
+    height: 45%;
+}
+
+/* when error occured 
+   z-index: 100 to cover all parent */
+.error{
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(223, 219, 219);
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 8px;
+}
+
+/* specify the style for text of error */
+.error p{
+    font-size: 20px;
+    color: rgb(222, 14, 14);
+}
+
+/* specify the style the box whom is used to show the context of title
+    for example flex-direction: row to put each of the under the other
+    and align-items: center to put them in the center of their holder
+    flex display is used
+    flex items are ordered in row
+*/
+.box_title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5px;
+    margin: 12px 0;
+}
+
+/* specify the style image part
+   border-radius for the round shape of the image
+*/
+.box_title img{
+    width: 175px;
+    height: 175px;
+    border-radius: 100px;
+    
+}
+
+/* some style just for textual content like name
+   flex items are ordered in column
+   flex display is used */
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* set margine for all tags in title class */
+.title *{
+    margin: 8px 0;
+}
+
+/* set font size for h1 tags in title class */
+.title h1{
+    font-size: 24px;
+}
+
+/* set font size for h3 tags in title class */
+.title h3{
+    font-size: 18px;
+}
+
+/* specify the style for description box
+   text-align: left for starting on the left side
+   flex display is used
+   flex items are ordered in column
+*/
+.box_des{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 5px;
+    margin: 12px 0;
+    text-align: left;
+}
+
+/* specify the style for description element by description id*/
+#description{
+    font-size: 18px;
+    margin-left: 10%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* specify the style for favorite languages element by fav_lang id*/
+#fav_lang{
+    font-size: 18px;
+    margin-left: 10%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* specify for the left or the second box */
+.second_box{
+    width: 25%;
+    min-height: 25%;
+    padding: 30px;
+}
+
+/* specify for the left or the second box that affect all of the tags in it */
+.second_box form *{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+/* 
+   some style for the submit button
+   color refers to the text of the button
+*/
+#submit-button {
+    background-color: dodgerblue;
+    color: #eee;
+}
+
+/* specify for the text that is shown when data got from cache */
+#iscached{
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    color: rgba(244, 14, 14, 0.667);
+}

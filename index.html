@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Midterm Web</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="box first_box">
+        <div class="box_title">
+          <img id="profile_image" />
+          <div class="title">
+            <h1 id="title_name"></h1>
+            <h3 id="title_username"></h3>
+            <h3 id="title_loc"></h3>
+            <h3 id="title_blog"></h3>
+          </div>
+        </div>
+        <div class="box_des">
+          <p id="description"></p>
+          <br><br>
+          <p id="fav_lang"></p>
+        </div>
+        <div class="error gone" id="error_container">
+          <p id="error_msg"></p>
+        </div>
+      </div>
+      <div class="box second_box">
+        <form id="form">
+          <input type="text" placeholder="Username" id="username" />
+          <button id="submit-button" type="submit">Submit</button>
+          <p id="iscached" ></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
